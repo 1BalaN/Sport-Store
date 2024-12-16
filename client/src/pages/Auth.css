@@ -1,0 +1,10 @@
+.input-field {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    box-shadow: 0 0 8px 2px #FF4500; /* Оранжевая тень */
+    border-color: #FF4500; /* Усиление границы */
+  }
+  

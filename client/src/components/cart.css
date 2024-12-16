@@ -1,0 +1,190 @@
+.shopping-cart {
+    max-width: 1000px;
+    margin: 20px auto;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title {
+    height: 60px;
+    border-bottom: 1px solid #e1e8ee;
+    padding: 20px 30px;
+    color: #5e6977;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .item {
+    padding: 20px 30px;
+    height: 150px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+  }
+  
+  .buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .delete-btn-q,
+  .like-btn-q {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .delete-btn-q {
+    width: 25px;
+    height: 25px;
+    background: url("../assets/icon_636011_edited.png") no-repeat center;
+    background-size: cover;
+  }
+  
+  .like-btn-q {
+    background: url("https://cdn.icon-icons.com/icons2/2073/PNG/512/heart_like_love_twitter_icon_127132.png");
+    width: 25px;
+    height: 25px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .is-active {
+    animation-name: animate;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(28);
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: left;
+    }
+    50% {
+      background-position: right;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+  
+  .item-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .item__image-container {
+    flex: 0 0 200px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.2s;
+  }
+  
+  /* Let’s add some basic style to  product name and description. */
+  .description {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 200px;
+  }
+  
+  .description span {
+    display: block;
+    font-size: 14px;
+    color: #43484d;
+    font-weight: 400;
+  }
+  
+  .description span:first-child {
+    margin-bottom: 5px;
+  }
+  .description span:last-child {
+    font-weight: 300;
+    margin-top: 8px;
+    color: #86939e;
+  }
+  
+  .quantity {
+    margin-right: 60px;
+    display: flex;
+  }
+  .quantity input {
+    /* -webkit-appearance: none; */
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: #43484d;
+    font-weight: 300;
+  }
+  
+  button[class*="btn-q"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #e1e8ee;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  .minus-btn-q svg {
+      width: 12px;
+      height: 12px;
+      color: #86939e;
+  
+  }
+  .plus-btn-q svg {
+      width: 10px;
+      height: 10px;
+      color: #86939e;
+      top: 0;
+      left: 0;
+  
+  }
+  
+  button:focus,
+  input:focus {
+    outline: 0;
+  }
+  
+  @media (max-width: 800px) {
+    .shopping-cart {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+    .item {
+      height: auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .item-image img {
+      width: 50%;
+    }
+    .item-image,
+    .quantity,
+    .description {
+      width: 100%;
+      text-align: center;
+      margin: 6px 0;
+    }
+    .buttons {
+      margin-right: 20px;
+    }
+  }
+  

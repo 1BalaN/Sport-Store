@@ -1,0 +1,25 @@
+.brand__list {
+    display: flex;
+    gap: 5px;
+    margin: 10px;
+    align-items: center;
+}
+
+.brand__card {
+    padding: 2px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.brand__card:hover {
+    border: 1px solid #212529;
+    background-color: #FF4500;
+    color: #fff;
+}
+
+.brand__card.active {
+    border: 1px solid #212529;
+    background-color: #FF4500;
+    color: #fff;
+}

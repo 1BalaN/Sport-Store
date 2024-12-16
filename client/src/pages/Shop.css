@@ -1,0 +1,44 @@
+.spinner__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+/* Стили для контейнера строки поиска */
+.search-container {
+    position: relative;
+    margin-bottom: 20px; /* Отступ снизу */
+}
+  
+  /* Стили для самого поля ввода */
+.search-input {
+    width: 80%; /* Чтобы строка поиска занимала всю доступную ширину */
+    padding: 10px 15px; /* Отступы внутри поля */
+    font-size: 16px; /* Размер шрифта */
+    border-radius: 30px; /* Округлые углы */
+    border: 1px solid #ccc; /* Цвет рамки */
+    transition: border-color 0.3s ease; /* Плавный переход для рамки */
+    margin-right: 20px;
+}
+  
+  /* Стили при фокусе на поле ввода */
+.search-input:focus {
+    border-color: #007bff; /* Цвет рамки при фокусе */
+    outline: none; /* Убираем стандартный синий контур браузера */
+}
+  
+  /* Добавление иконки в строку поиска */
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%); /* Центрируем по вертикали */
+    pointer-events: none; /* Делаем иконку кликабельной */
+}
+
+.search-input-wrapper {
+  width: 600px;
+  display: flex;
+  justify-content: flex-start;
+}
+  

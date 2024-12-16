@@ -1,0 +1,289 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    width: 100%;
+    max-width: 1000px; 
+    justify-content: center;
+    justify-items: center; 
+    column-gap: 30px; 
+    row-gap: 40px; 
+    margin: 0 auto;
+}
+
+.card__product {
+    width: 200px;
+    min-height: 350px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative;
+}
+  
+.card__product:hover {
+    box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+}
+  
+.card__top {
+    flex: 0 0 200px; 
+    position: relative;
+    overflow: hidden; 
+}
+  
+.card__image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+  
+.card__image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: 0.2s;
+}
+  
+.card__image:hover > img {
+    transform: scale(1.1);
+}
+  
+.card__label {
+    padding: 4px 8px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: #ff6633;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+}
+  
+.card__bottom {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    padding: 10px;
+}
+  
+.card__prices {
+    display: flex;
+    margin-bottom: 10px;
+}
+  
+.card__price::after {
+    content: "BYN";
+    margin-left: 4px;
+    position: relative;
+}
+  
+.card__price--discount {
+    font-weight: 700;
+    font-size: 15px;
+    color: #414141;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+  
+.card__price--discount::before {
+    content: "Со скидкой";
+    font-weight: 400;
+    font-size: 13px;
+    color: #bfbfbf;
+}
+  
+.card__price--common {
+    font-weight: 400;
+    font-size: 17px;
+    color: #606060;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+}
+  
+  /* .card__price--common::before {
+    content: "Обычная";
+    font-weight: 400;
+    font-size: 13px;
+    color: #bfbfbf;
+  }
+   */
+.card__title {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    color: #414141;
+    text-decoration: none;
+}
+  
+.card__title:hover {
+    color: #ff6633;
+}
+  
+.card__add {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    font-size: 17px;
+    color: #4a4845;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #5e4f40;
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: 0.2s;
+    margin-top: auto; 
+}
+  
+.card__add:hover {
+    border: 1px solid #5f33ff;
+    background-color: #5f33ff;
+    color: #fff;
+}
+
+.cart__clear {
+  display: block;
+  width: 200px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #4a4845;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #5e4f40;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 20px;
+  align-self: end;
+}
+
+.cart__clear:hover {
+    border: 1px solid #5f33ff;
+    background-color: #5f33ff;
+    color: #fff;
+}
+
+.cart__clear,
+.cart__confirm {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 200px; /* Adjust width as per your design */
+}
+
+.cart__clear {
+    background-color: #FF4500;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(255, 69, 0, 0.2);
+}
+
+.cart__clear:hover {
+    background-color: #e04300;
+    box-shadow: 0 6px 12px rgba(255, 69, 0, 0.3);
+}
+
+.cart__clear:active {
+    transform: scale(0.98);
+}
+
+.cart__confirm {
+    background-color: #212529;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(33, 37, 41, 0.2);
+}
+
+.cart__confirm:hover {
+    background-color: #343a40;
+    box-shadow: 0 6px 12px rgba(33, 37, 41, 0.3);
+}
+
+.cart__confirm:active {
+    transform: scale(0.98);
+}
+
+.cart__clear:focus,
+.cart__confirm:focus {
+    outline: none;
+}
+
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between; 
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+.order-details {
+    background-color: #fff;
+    border: 2px solid #ff4500;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #212529;
+    max-width: 400px;
+    margin: 20px ;
+    font-family: Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ff4500;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #212529;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #ff4500;
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
+}
+
+.payment-methods {
+    display: flex;
+    gap: 15px;
+}
+
+.payment-method {
+    font-size: 14px;
+    font-weight: bold;
+    color: #212529;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.payment-method input {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+
+
+  
